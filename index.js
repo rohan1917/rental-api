@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
   res.send("🚀 ZoomCar Clone Backend is Running!");
 });
 
+// test api
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
