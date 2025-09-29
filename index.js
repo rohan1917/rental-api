@@ -1,21 +1,24 @@
-const express = require("express");
-const dotenv = require("dotenv");
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import vehicleRoutes from "./routes/vehicleRoutes.js";
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
+// Middleware
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("🚀 ZoomCar Clone Backend is Running!");
-});
-
+// Health check
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.listen(PORT, () => {
-  console.log(` Server running on Port ${PORT}`);
-});
+// Routes
+app.use("/api/vehicles", vehicleRoutes);
+
+
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
