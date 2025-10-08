@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("🚀 ZoomCar Clone Backend is Running!");
 });
 
+const vehicleRoutes = require("./modules/vehicles/routes/vehicleRoutes");
+
+// Routes
+app.use("/api/vehicles", vehicleRoutes);
+
 // test api
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
