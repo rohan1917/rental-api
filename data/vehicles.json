@@ -1,0 +1,35 @@
+{
+    "vehicles": [
+      {
+        "id": "1",
+        "vehicleNumber": "MH12AB1234",
+        "type": "Car",
+        "brand": "Toyota",
+        "model": "Innova Crysta",
+        "fuelType": "Diesel",
+        "transmission": "Automatic",
+        "seatingCapacity": 7,
+        "rentalPricePerDay": 2500,
+        "availabilityStatus": "Available",
+        "registrationDate": "10/01/2023",
+        "lastServiceDate": "01/08/2023",
+        "insuranceExpiryDate": "10/01/2024"
+      },
+      {
+        "id": "2",
+        "vehicleNumber": "DL09XY5678",
+        "type": "Bike",
+        "brand": "Royal Enfield",
+        "model": "Classic 350",
+        "fuelType": "Petrol",
+        "transmission": "Manual",
+        "seatingCapacity": 2,
+        "rentalPricePerDay": 1200,
+        "availabilityStatus": "Rented",
+        "registrationDate": "15/03/2022",
+        "lastServiceDate": "15/07/2023",
+        "insuranceExpiryDate": "15/03/2024"
+      }
+    ]
+  }
+  
