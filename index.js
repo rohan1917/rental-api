@@ -21,27 +21,14 @@ app.get("/", (req, res) => {
   res.send("🚀 ZoomCar Clone Backend is Running!");
 });
 
+const vehicleRoutes = require("./modules/vehicles/routes/vehicleRoutes");
+
 // Routes
-/**
- * Route: /api/vehicles
- * Method: All
- * Description: Routes related to vehicles
- */
-app.use("/api/vehicles", vehicleRouter);
+app.use("/api/vehicles", vehicleRoutes);
 
-/**
- * Route: /api/drivers
- * Method: All
- * Description: Routes related to drivers
- */
-app.use("/api/drivers", driverRouter);
-
-// 404 Route
-app.get("*", (req, res) => {
-  res.status(404).json({
-    success: false,
-    message: "This route doesn't exist.",
-  });
+// test api
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
 });
 
 app.listen(PORT, () => {
